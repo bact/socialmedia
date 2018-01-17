@@ -2,6 +2,7 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 import argparse
+from collections import OrderedDict
 
 parser = argparse.ArgumentParser(
     description='Get Twitter stream in a language specified. Filter by common word list.')
@@ -30,8 +31,11 @@ print("Use word list from: {}".format(common_words_filename))
 
 with open(common_words_filename) as f:
     words = f.readlines()
+_words = [w.split() for w in words]
+_words = [w for x in _words for w in x]
+words = list(OrderedDict((w, True) for w in _words).keys())
 del words[400:]
-words = [word.strip() for word in words] 
+print("Number of words: {}".format(len(words)))
 
 CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
