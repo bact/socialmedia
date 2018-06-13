@@ -66,7 +66,7 @@ def main():
     output_filename = args['output_json_file']
 
     words = []
-    common_words_filename = 'words-' + lang + '.txt'
+    common_words_filename = 'data/stopwords-' + lang + '.txt'
     with open(common_words_filename) as f:
         words = f.readlines()
     _words = [w.split() for w in words] # break compound words into single words
