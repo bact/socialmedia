@@ -7,7 +7,7 @@ A script to collect tweets from Twitter stream
 - Burmese	http://1000mostcommonwords.com/tag/burmese-words/
 - English	http://world-english.org/english500.htm
 - Vietnamese	http://www.101languages.net/vietnamese/vietnamese-word-list/
-- Thai common words list, partially drawn from Chulalongkorn University's 400 most used Thai words.
+- Thai common words list, partially drawn from Chulalongkorn University's 400 most used Thai words. http://womenlearnthai.com/index.php/thai-frequency-lists-with-english-definitions/
 
 ## Plan
 - Check if it's a retweet or not
